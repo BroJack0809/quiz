@@ -8,17 +8,25 @@
 
  var para = document.getElementById("button2");
  para.innerHTML = "怎麼那麼棒！！.";
+
+ } 
+ var counter=0;
+ function myFunction() {
+ 
+ if(counter==0)
+ {
+ var btn = document.createElement("BUTTON");
+ btn.innerHTML = "Change this document.";
  }
- function myFuncyion(){
- 	var btn=document.createElement("BUTTON");
- 	btn.innerHTML="CLICK ME";
- 	document.body.appendChild(btn);
- }
+ document.body.appendChild(btn).addEventListener("click", change);
+ counter++;
+}
  </script>
 </head>
 <body>
- <input type="button" value="Change this document." onclick="change()">
- <h1 id="button1">CGU</h1>
+ <!-- <button onclick="myFunction()">Try it</button> -->
+ <input type="button" value="Try it" onclick="myFunction()">
+<h1 id="button1">CGU</h1>
  <p id="button2">好棒棒</p>
 </body>
 </head>
